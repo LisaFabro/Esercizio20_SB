@@ -1,0 +1,24 @@
+server:
+  port: 7000
+---
+environment: production
+server:
+  port: 5000
+spring:
+  config:
+    activate:
+      on-profile: prod
+name: prod-YAML
+application:
+  welcomeMsg: Hello from Prod
+---
+environment: testing
+server:
+  port: 4000
+spring:
+  config:
+    activate:
+      on-profile: test
+name: test-YAML
+application:
+  welcomeMsg: Hello from Test
